@@ -4,9 +4,10 @@ namespace Problems
 {
     public class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
-            Console.WriteLine(Prefix("hello there ."));
+            Program p = new Program();
+            Console.WriteLine(Program.Prefix("what    ...  did you say?? "));
             Console.ReadLine();
         }
 
@@ -14,22 +15,25 @@ namespace Problems
         {
             if(str =="")
             {
-                return "null";
+                return "0,0:";
             }
             else
             {
                 int strLeng = str.Length;
                 int numWords = 0;
                 string[] strArr = str.Split();
-                string[] symbols = new string[33]{"0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","{","}","[","]",":","|","<",">",",","/","?","."," "};
+                string[] symbols = new string[33]{" ","0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","{","}","[","]",":","|","<",">",",","/","?","."};
                 for(int i = 0; i<strArr.Length; i+=1 )
                 {
+                    Console.WriteLine(strArr[i]);
                     bool isword = true;
-                    for(int j = 0; j<symbols.Length; j+=1 )
+                    for(int j = 0; j<33; j+=1 )
                     {
-                        if(strArr[i].Equals(symbols[j]))
+                        
+                        if(strArr[i].Contains(symbols[j]))
                         {
                             isword=false;
+                            Console.WriteLine("false");
                         }
                         
                     }
