@@ -7,7 +7,7 @@ namespace Problems
          static void Main(string[] args)
         {
             Program p = new Program();
-            Console.WriteLine(Program.Prefix("what    ...  did you say?? "));
+            Console.WriteLine(Program.Prefix("? >"));
             Console.ReadLine();
         }
 
@@ -38,21 +38,24 @@ namespace Problems
 
         private static bool isWord(string str)
         {
+            
             string[] symbols = new string[32]{" ","0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","{","}","[","]",":","|","<",">",",","/","?"};
-            bool isword = true;
+            bool iswrd = true;
             for(int j = 0; j<32; j+=1 )
             {
-                if(str.Equals(""))
+                if(string.Equals(str,""))
                 {
-                    isword=false;
-                }        
-                else if(str[0].Equals(symbols[j]))
+                    
+                    iswrd=false;
+                }else
+                if(string.Equals(str[0],symbols[j]))
                 {
-                    isword=false;            
+                    iswrd=false; 
+                           
                 }
                         
             }
-            if(isword==true)
+            if(iswrd==true)
             {
                return true;
             }
