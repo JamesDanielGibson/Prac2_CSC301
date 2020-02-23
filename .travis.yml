@@ -4,9 +4,9 @@ script:
 	dotnet test
 matrix:
 	include:
-	- dist: xenial
-	- dist: bionic
-	- dotnet: 2.0.0
-	  os: osx
+		- dist: xenial
+		- dist: bionic
+		- dotnet: 2.0.0
+		  os: osx
 
 
